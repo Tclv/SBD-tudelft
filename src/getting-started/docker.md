@@ -145,3 +145,13 @@ The further we get in the manual, we will generally not mention the full Docker
 commands this explicitly again, so know that if we mention e.g. `spark-shell`,
 you should run the corresponding `docker run` command listed above. You can
 create scripts or aliases for your favorite shell to avoid having to type a lot.
+
+
+### Commands for fish
+
+If you are using the [fish shell](https://fishshell.com/) then you might experience 
+some issues with the above commands.
+In that case, please substitute ```"`pwd`"``` for `(pwd)` in those commands.
+
+
+So ```docker run -it --rm -v "`pwd`":/root sbt sbt``` would become `docker run -it --rm -v (pwd):/root sbt sbt`.
